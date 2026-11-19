@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: aegis-forensics-api
+    runtime: python
+    plan: standard
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.10.14"
+      - key: MODEL_PATH
+        value: "models/best_model.pth"
+      - key: LOW_CONFIDENCE_THRESHOLD
+        value: "0.65"
+      - key: FAKE_DECISION_THRESHOLD
+        value: "0.50"
+      - key: CORS_ORIGINS
+        value: "*"

@@ -1,0 +1,6 @@
+{
+  "name": "Aegis Forensics — Deepfake Image Detection",
+  "description": "AI forensic web platform powered by an existing trained EfficientNet-B0 PyTorch deepfake detection model (fake=0, real=1).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
