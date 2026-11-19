@@ -4,9 +4,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
     LOW_CONFIDENCE_THRESHOLD=0.65 \
-    MODEL_PATH=best_model.pth
+    MODEL_PATH=best_model.pth \
     PORT=8000
-
 WORKDIR /app
 
 # Install minimal runtime libs for Pillow/OpenMP if needed
