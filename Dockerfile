@@ -4,7 +4,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
     LOW_CONFIDENCE_THRESHOLD=0.65 \
-    MODEL_PATH=models/best_model.pth \
+    MODEL_PATH=best_model.pth
     PORT=8000
 
 WORKDIR /app
@@ -20,6 +20,7 @@ RUN pip install --upgrade pip && \
 
 COPY backend/ ./backend/
 COPY models/ ./models/
+COPY best_model.pth ./best_model.pth
 COPY results/ ./results/
 
 EXPOSE 8000
